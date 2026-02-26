@@ -97,8 +97,8 @@ main()
 	pkmg_detection
 	packets_install PACKETS
 	packets_print PACKETS
-	mv_configs_test
-	#reboot
+	mv_configs
+	reboot
 }
 
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
