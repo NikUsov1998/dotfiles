@@ -11,11 +11,7 @@ configs.setup({
 		"vim",
 		"yaml",
 		"toml",
-		"scheme",
-		"scala",
-		"rust",
 		"python",
-		"ocaml",
 		"make",
 		"json",
 		"llvm",
@@ -24,8 +20,6 @@ configs.setup({
 		"gitcommit",
 		"gitattributes",
 		"gitignore",
-		"gomod",
-		"go",
 		"diff", -- git diff
 		"markdown_inline",
 	},
@@ -48,7 +42,7 @@ configs.setup({
 		-- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
 		-- the name of the parser)
 		-- If you want to disable the module for some languages you can pass a list to the `disable` option.
-		disable = { "c", "rust" },
+        -- disable = { "c" },
 		-- Or use a function for more flexibility, e.g. to disable slow tree-sitter highlight for large files
 		-- disable = function(lang, buf)
 		--     local max_filesize = 100 * 1024 -- 100 KB

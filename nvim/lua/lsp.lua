@@ -53,13 +53,6 @@ vim.api.nvim_create_autocmd("CursorHold", {
 
 vim.lsp.enable({
 	"clangd",
-	"clojure_lsp",
 	"lua_ls",
 	"ty",
-	"ocamllsp",
-	"fennel_language_server",
-	"tinymist",
-	"roc_ls",
-	"rust_analyzer",
-	"zls",
 })
