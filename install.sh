@@ -92,12 +92,18 @@ main()
 		"docker"
 		"docker-compose"
 		"screen"
+		"StyLua"
+		"clang"
+		"ruff"
+		"python3-isort"
 	)
 	root_check
 	pkmg_detection
 	packets_install PACKETS
 	packets_print PACKETS
 	mv_configs
+	echo chown -Rh $(ls /home/):$(ls /home/) /home/$(ls /home/)/.config/nvim 
+	chown -Rh $(ls /home/):$(ls /home/) /home/$(ls /home/)/.config/nvim 
 	reboot
 }
 
