@@ -18,29 +18,29 @@ bindkey '\e[1;5D' forward-word
 bindkey '\e[2~' overwrite-mode
 bindkey '\e[3~' delete-char
 # End of lines configured by zsh-newuser-install
-# Включаем цвета
+# Set colors
 autoload -U colors && colors
 export TERM=xterm-256color
 
-# Настройка истории
+# History settings
 setopt HIST_IGNORE_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
-# Алиасы для подсветки ls
+# aliases
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias la='ls -A'
 
-# Плагин автоподсказок (серые подсказки)
+# Suggestions plugin
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Цвет подсказки (можно поменять, например, fg=8)
+# Suggestions color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=242"
 
-# Плагин подсветки синтаксиса (ДОЛЖЕН БЫТЬ ПОСЛЕДНИМ)
+# syntax highliting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Кастомный промпт (как user@host:/path$ )
+# user@host:/path$
 PROMPT='%F{green}%n@%m%f:%F{blue}%~%f$ '
