@@ -1,5 +1,5 @@
 -- Define your colorscheme here.
-local colorscheme = "pablo"
+local colorscheme = "retrobox"
 -- local colorscheme = "darkblue"
 -- local colorscheme = ""
 -- local colorscheme = ""
