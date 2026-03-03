@@ -94,8 +94,17 @@ main()
 		"screen"
 		"StyLua"
 		"clang"
+		"clang-tools-extra"
+		"clang-analyzer"
 		"ruff"
 		"python3-isort"
+		"fzf"
+		"xclip" # system clipboard plugin
+		"python3-lsp-server"
+		"python3-language-server"
+		"bash-language-server"
+		"cmake-language-server"
+		"lua-language-server"
 	)
 	root_check
 	pkmg_detection
