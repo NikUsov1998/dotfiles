@@ -102,6 +102,7 @@ main()
 		"python3-isort"
 		"fzf"
 		"xclip" # system clipboard plugin
+		"lsof"
 		"python3-lsp-server"
 		"python3-language-server"
 		"bash-language-server"

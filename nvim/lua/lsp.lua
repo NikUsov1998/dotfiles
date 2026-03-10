@@ -16,7 +16,19 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		keymap.set("n", "gr", lsp.buf.references, bufopts)
 		keymap.set("n", "gd", lsp.buf.definition, bufopts)
 		keymap.set("n", "<space>rn", lsp.buf.rename, bufopts)
-		keymap.set("n", "K", lsp.buf.hover, bufopts)
+		--keymap.set("n", "K", lsp.buf.hover, bufopts)
+        vim.api.nvim_create_autocmd("WinEnter", {
+            callback = function()
+                if vim.api.nvim_win_get_config(0).relative ~= "" then
+                    -- В плавающем окне используем m для man
+                    vim.keymap.set("n", "m", function()
+                        local word = vim.fn.expand("<cword>")
+                        vim.cmd("wincmd p")
+                        vim.cmd("Man " .. word)
+                    end, { noremap = true, silent = true, buffer = 0 })
+                end
+            end,
+        })
 		keymap.set({ "n", "v" }, "<space>f", function()
 			local mode = vim.api.nvim_get_mode().mode
 
@@ -47,7 +59,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 --             By default, `updatetime` is equal to 4000 ms
 vim.api.nvim_create_autocmd("CursorHold", {
 	callback = function()
-		vim.diagnostic.open_float(nil, { focusable = false, source = "if_many" })
+		vim.diagnostic.open_float(nil, { focusable = false, source = "if_many", updatetime = 2000 })
 	end,
 })
 
@@ -55,4 +67,6 @@ vim.lsp.enable({
 	"clangd",
 	"lua_ls",
 	"ty",
+    "python",
+    "bash"
 })
