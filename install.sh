@@ -51,6 +51,8 @@ mv_configs()
 	cp ./zshrc /etc/zsh/zshrc
 	cp ./rc.conf /etc/rc.conf
 	cp ./rc.local /etc/rc.local 
+	rm -rf /home/$(ls)/.config/nvim
+	rm -rf /home/$(ls)/.config/htop
 	cp -r ./nvim /home/$(ls)/.config/nvim
 	cp -r ./htop /home/$(ls)/.config/htop
 }
