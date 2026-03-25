@@ -9,25 +9,40 @@ You cat run install script, but because i created this one for myself it can con
 see in install.sh and choose which packages you need.
 ```bash
 	PACKETS=(
-		"zsh"
+		"zsh"  # Better shell 
 		"zsh-autosuggestions"
 		"zsh-completions"
 		"zsh-history-substring-search"
 		"zsh-syntax-highlighting"
 		"htop"
-		"neovim"
+		"neovim"  # best code editor ever
 		"tree"
 		"git"
-		"fastfetch"
+		"fastfetch"  # ricing
 		"gcc"
 		"gdb"
 		"mypy"
-		"nerd-fonts"
+		"nerd-fonts"  # Make Nvim look pretty
 		"tmux"
 		"timeshift"
 		"docker"
 		"docker-compose"
 		"screen"
+		"StyLua"
+		"clang"  # for C language server
+		"clang-tools-extra"
+		"clang-analyzer"
+		"ruff"  # Linter
+		"python3-isort"  # import sorting
+		"fzf"
+		"xclip" # system clipboard plugin
+		"lsof"
+		"python3-lsp-server"
+		"python3-language-server"
+		"bash-language-server" 
+		"cmake-language-server"
+		"lua-language-server"
+		"wmctrl" # quick navigation trough workspaces
 	)
 ```
 ### How to configure

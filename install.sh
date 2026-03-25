@@ -105,7 +105,7 @@ main()
 		"lsof"
 		"python3-lsp-server"
 		"python3-language-server"
-		"bash-language-server" # for old x32 laptop use "sudo npm install -g bash-language-server@4.0.0" newer versions cause FatalOOM
+		"bash-language-server" 
 		"cmake-language-server"
 		"lua-language-server"
 		"wmctrl" # quick navigation trough workspaces
