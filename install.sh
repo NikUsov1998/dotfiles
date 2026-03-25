@@ -53,8 +53,8 @@ mv_configs()
 	#cp ./rc.local /etc/rc.local 
 	rm -rf /home/$(ls)/.config/nvim
 	rm -rf /home/$(ls)/.config/htop
-	cp -r ./nvim /home/$(ls)/.config/nvim
-	cp -r ./htop /home/$(ls)/.config/htop
+	cp -rvf ./nvim /home/$(ls)/.config/nvim
+	cp -rvf ./htop /home/$(ls)/.config/htop
 }
 
 mv_configs_test()
@@ -75,40 +75,40 @@ main()
 	OPTIONS="-Sy"
 
 	PACKETS=(
-		"zsh"
+		"zsh"  # Better shell 
 		"zsh-autosuggestions"
 		"zsh-completions"
 		"zsh-history-substring-search"
 		"zsh-syntax-highlighting"
 		"htop"
-		"neovim"
+		"neovim"  # best code editor ever
 		"tree"
 		"git"
-		"fastfetch"
+		"fastfetch"  # ricing
 		"gcc"
 		"gdb"
 		"mypy"
-		"nerd-fonts"
+		"nerd-fonts"  # Make Nvim look pretty
 		"tmux"
 		"timeshift"
 		"docker"
 		"docker-compose"
 		"screen"
 		"StyLua"
-		"clang"
+		"clang"  # for C language server
 		"clang-tools-extra"
 		"clang-analyzer"
-		"ruff"
-		"python3-isort"
+		"ruff"  # Linter
+		"python3-isort"  # import sorting
 		"fzf"
 		"xclip" # system clipboard plugin
 		"lsof"
 		"python3-lsp-server"
 		"python3-language-server"
-		"bash-language-server"
+		"bash-language-server" # for old x32 laptop use "sudo npm install -g bash-language-server@4.0.0" newer versions cause FatalOOM
 		"cmake-language-server"
 		"lua-language-server"
-		"wmctrl"
+		"wmctrl" # quick navigation trough workspaces
 	)
 	root_check
 	pkmg_detection
