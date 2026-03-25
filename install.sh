@@ -49,8 +49,8 @@ packets_print()
 mv_configs()
 {
 	cp ./zshrc /etc/zsh/zshrc
-	cp ./rc.conf /etc/rc.conf
-	cp ./rc.local /etc/rc.local 
+	#cp ./rc.conf /etc/rc.conf
+	#cp ./rc.local /etc/rc.local 
 	rm -rf /home/$(ls)/.config/nvim
 	rm -rf /home/$(ls)/.config/htop
 	cp -r ./nvim /home/$(ls)/.config/nvim
@@ -70,9 +70,9 @@ main()
 {
 	PKMG=$(pkmg_detection)
 	echo $PKMG
-	$PKMG -Suy # Update system 
+	#$PKMG -Suy # Update system 
 	COMMAND=""
-	OPTIONS="-y"
+	OPTIONS="-Sy"
 
 	PACKETS=(
 		"zsh"
@@ -108,6 +108,7 @@ main()
 		"bash-language-server"
 		"cmake-language-server"
 		"lua-language-server"
+		"wmctrl"
 	)
 	root_check
 	pkmg_detection
