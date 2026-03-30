@@ -32,7 +32,7 @@ see in install.sh and choose which packages you need.
 		"clang"  # for C language server
 		"clang-tools-extra"
 		"clang-analyzer"
-		"ruff"  # Linter
+		"ruff"  # python Linter
 		"python3-isort"  # import sorting
 		"fzf"
 		"xclip" # system clipboard plugin
@@ -46,18 +46,21 @@ see in install.sh and choose which packages you need.
 	)
 ```
 ### How to configure
+#### For x64 system
+You can run install.sh script, its, will install zsh as default shell, some basic utils for system managing, and neovim 
+with packets to use it as ide. You can manage packages as you prefer in install.sh script. 
 #### For x32 system
-    I find my old laptop quite gorgeous so here its most valuable configuration for you to compare with your hardware
-        * Intel Pentium 780 M 2.2 GHz
-        * 2 Gb of DDR1 333MHz
-    As you can see its quite slow by modern standarts, so for it to run this nvim config in all its glory
-    1. **After** execution of install.sh you must remove bash-language-server in your package manager;
-        in my case its:
+I find my old laptop quite gorgeous so here its most valuable configuration for you to compare with your hardware
+    * Intel Pentium 780 M 2.2 GHz
+    * 2 Gb of DDR1 333MHz
+As you can see its quite slow by modern standarts, so for it to run this nvim config in all its glory
+1. **After** execution of install.sh you must remove bash-language-server in your package manager, in my case its:
 ```bash 
     xbps-remove bash-language-server
 ```
-    2. Use:
+2. Use:
 ```bash 
     sudo npm install -g bash-language-server@4.0.0
 ```
-    This actions helped me with FatalOOM error that drive bash-language-server to collapse
+Without this downgrade bashls has freak out and exit with FatalOOM error.
+This actions helped me with FatalOOM error that drive bash-language-server to collapse and bashls works just fine
