@@ -49,21 +49,12 @@ packets_print()
 mv_configs()
 {
 	cp ./zshrc /etc/zsh/zshrc
-	#cp ./rc.conf /etc/rc.conf
-	#cp ./rc.local /etc/rc.local 
-	rm -rf /home/$(ls)/.config/nvim
-	rm -rf /home/$(ls)/.config/htop
-	cp -rvf ./nvim /home/$(ls)/.config/nvim
-	cp -rvf ./htop /home/$(ls)/.config/htop
-}
-
-mv_configs_test()
-{
-	cp ./zshrc ~/Desktop/installer_test/
-	cp ./rc.conf ~/Desktop/installer_test/
-	cp ./rc.local ~/Desktop/installer_test/
-	cp -rfv ./nvim ~/Desktop/installer_test/
-	cp -rfv ./htop ~/Desktop/installer_test/
+	cp ./.gdbinit /home/"$(ls)"/
+	cp ./.tmux.conf /home/"$(ls)"/
+	rm -rf /home/"$(ls)"/.config/nvim
+	rm -rf /home/"$(ls)"/.config/htop
+	cp -rvf ./nvim /home/"$(ls)"/.config/nvim
+	cp -rvf ./htop /home/"$(ls)"/.config/htop
 }
 
 main()
@@ -115,8 +106,8 @@ main()
 	packets_install PACKETS
 	packets_print PACKETS
 	mv_configs
-	echo chown -Rh $(ls /home/):$(ls /home/) /home/$(ls /home/)/.config/nvim 
-	chown -Rh $(ls /home/):$(ls /home/) /home/$(ls /home/)/.config/nvim 
+	echo chown -Rh "$(ls /home/)":"$(ls /home/)" /home/"$(ls /home/)"/.config/nvim 
+	chown -Rh "$(ls /home/)":"$(ls /home/)" /home/"$(ls /home/)"/.config/nvim 
 	reboot
 }
 
