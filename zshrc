@@ -32,6 +32,7 @@ setopt SHARE_HISTORY
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias la='ls -A'
+alias pdb='python3 -m pudb'
 
 # Suggestions plugin
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

@@ -64,3 +64,8 @@ As you can see its quite slow by modern standarts, so for it to run this nvim co
 ```
 Without this downgrade bashls has freak out and exit with FatalOOM error.
 This actions helped me with FatalOOM error that drive bash-language-server to collapse and bashls works just fine
+# TODO: 
+1) remap endline and start line
+2) fix Ctrl + A/ Ctrl + X
+3) add Replace in scope on Shift + R
+4) add something like NERDTreeToggle
